@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id="custom_cursor"></div>
+
+	<section>
+		
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="main.js"></script>
+
+	<style type="text/css">
+		/***** ============== *****/
+		/*****  Custom Cursor *****/
+		/***** ============== *****/
+		/* Code lifted from: https://medium.com/javascript-in-plain-english/how-to-make-a-custom-cursor-with-lerp-that-follows-pointer-6aa6f92fe48a */
+
+			#custom_cursor{
+				width: 65px;
+				height: 65px;
+				border: 2px solid rgba(0,0,0,0.75);
+				background-color: rgba(255,255,255,0.25);
+				-webkit-mix-blend-mode: difference;
+				position:fixed;
+				border-radius:50%;
+				z-index: 999999999999;
+				pointer-events: none;
+			}
+			#custom_cursor.hover{
+
+			}
+			#custom_cursor.click{
+				
+			}
+
+			html, *{
+					/*cursor: none;*/
+			}
+	</style>
+
+</body>
+</html>
