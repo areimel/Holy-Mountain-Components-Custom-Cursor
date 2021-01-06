@@ -1,0 +1,46 @@
+/***** ============== *****/
+/*****  Custom Cursor *****/
+/***** ============== *****/
+/* Code lifted from: https://medium.com/javascript-in-plain-english/how-to-make-a-custom-cursor-with-lerp-that-follows-pointer-6aa6f92fe48a */
+
+	#custom_cursor{
+		z-index: 999999999999999;
+		position:fixed;
+		width: 65px;
+		height: 65px;
+		pointer-events: none;
+	}
+	#custom_cursor:after{
+		content: '';
+		width: inherit;
+		height: inherit;
+		/*background-image: url("#");*/
+		background-color: rgba(0,0,0,0.25);
+		border: 2px solid rgba(0,0,0,0.75);
+		position:fixed;
+		border-radius:50%;
+		z-index: 999999999999999;
+		transition: .15s ease-in-out;
+		transform-origin: center;
+		will-change: transform, opacity;
+	}
+	#custom_cursor.hover:after{
+		transform: scale3D(1.5,1.5,1);
+		opacity: .5;
+	}
+	#custom_cursor.click:after{
+		transform: scale3D(.75,.75,1);
+		opacity: .5;
+	}
+
+	html, *{
+		/* Uncomment to use ONLY Custom Cursor */
+		/*cursor: none;*/
+	}
+
+
+	@media screen and (max-width: 991px){
+		#custom_cursor{
+			display: none;
+		}
+	}
